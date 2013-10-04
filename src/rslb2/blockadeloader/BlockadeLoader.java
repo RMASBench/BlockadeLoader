@@ -55,7 +55,7 @@ import rescuecore2.worldmodel.EntityID;
 
 /**
  * Main class of the blockades loader simulator.
- * 
+ *
  * @author Marc Pujol <mpujol@iiia.csic.es>
  */
 public class BlockadeLoader extends StandardSimulator {
@@ -143,10 +143,7 @@ public class BlockadeLoader extends StandardSimulator {
         blockade.setPosition(road.getID());
 
         // Report the addition to the kernel
-        List<EntityID> roadBlockades = road.getBlockades();
-        if (roadBlockades == null) {
-            roadBlockades = new ArrayList<>();
-        }
+        List<EntityID> roadBlockades = new ArrayList<>();
         roadBlockades.add(blockade.getID());
         road.setBlockades(roadBlockades);
         changes.addChange(road, road.getBlockadesProperty());
